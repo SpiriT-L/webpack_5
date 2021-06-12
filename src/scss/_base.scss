@@ -1,0 +1,28 @@
+@import '_reset';
+@import '_fonts';
+@import '_variable';
+@import '_menu';
+
+//
+
+body {
+  background: $bg;
+  &._lock {
+    overflow: hidden;
+  }
+}
+
+// Главный контейнер
+._container {
+  width: 100%;
+  max-width: $max-width + 20px;
+  padding: 0 10px;
+  margin-bottom: 0 auto;
+}
+
+// Второй контейнер
+._container2 {
+  width: 100%;
+  max-width: $max-width + 20px;
+  margin-bottom: 0 auto;
+}

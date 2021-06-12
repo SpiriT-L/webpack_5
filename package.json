@@ -11,6 +11,7 @@
   "author": "LeonID",
   "license": "ISC",
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
     "cross-env": "^7.0.3",
     "html-webpack-plugin": "^5.3.1",
     "webpack": "^5.38.1",

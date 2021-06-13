@@ -1,3 +1,4 @@
+@import '_vendor';
 @import '_reset';
 @import '_fonts';
 @import '_variable';
@@ -5,7 +6,7 @@
 
 //
 
-body {
+/* body {
   background: $bg;
   &._lock {
     overflow: hidden;
@@ -25,4 +26,4 @@ body {
   width: 100%;
   max-width: $max-width + 20px;
   margin-bottom: 0 auto;
-}
+} */

@@ -17,6 +17,14 @@ module.exports = {
     filename: `./js/${filename('js')}`,
     path: path.resolve(__dirname, 'app'),
   },
+  devServer: {
+    historyApiFallback: true,
+    contentBase: path.join(__dirname, 'app'),
+    open: true,
+    compress: true,
+    hot: true,
+    port: 3000,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.html'),
@@ -33,8 +41,20 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
+      {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: isDev,
+            },
+          },
+          'css-loader',
+        ],
       },
       {
         test: /\.s[ac]ss$/,
